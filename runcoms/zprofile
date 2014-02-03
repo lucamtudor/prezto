@@ -17,10 +17,10 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
-
+export DYLD_LIBRARY_PATH="/Developer/NVIDIA/CUDA-5.5/lib:$DYLD_LIBRARY_PATH"
 #
 # Language
 #
@@ -43,9 +43,12 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  /usr/local/{bin,sbin}
-  /home/tudor/00.DevCenter/Android/android-studio/sdk/{platform-tools,tools}
-  /home/tudor/00.DevCenter/Dart/dart/dart-sdk/bin
+  /Users/tudor/bin
+  /Applications/Android Studio.app/sdk/{platform-tools,tools}
+  /Users/tudor/00.DevCenter/Dart/dart/dart-sdk/bin
+  /Developer/NVIDIA/CUDA-5.5/bin
+  /opt/local/bin
+  /usr/local/bin
   $path
 )
 
