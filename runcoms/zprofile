@@ -21,6 +21,7 @@ export EDITOR='vim'
 export VISUAL='vim'
 export GIT_EDITOR='vim'
 export PAGER='less'
+export ANDROID_HOME='~/00.DevCenter/Android/android-studio/sdk'
 
 #
 # Language
