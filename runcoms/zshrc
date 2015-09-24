@@ -22,4 +22,3 @@ source '/Users/tudor/Library/google-cloud-sdk/completion.zsh.inc'
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/tudor/.gvm/bin/gvm-init.sh" ]] && source "/Users/tudor/.gvm/bin/gvm-init.sh"
-

@@ -16,10 +16,15 @@
 
 # Print a random, hopefully interesting, adage.
 if (( $+commands[fortune] )); then
-  fortune -a
-  print
+  if [[ -t 0 || -t 1 ]]; then
+    fortune -s
+    print
+  fi
 fi
+<<<<<<< HEAD
 
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+=======
+>>>>>>> f2a826e963f06a204dc0e09c05fc3e5419799f52
