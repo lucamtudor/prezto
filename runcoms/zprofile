@@ -21,7 +21,7 @@ export EDITOR='vim'
 export VISUAL='vim'
 export GIT_EDITOR='vim'
 export PAGER='less'
-export ANDROID_HOME='~/00.DevCenter/Android/android-studio/sdk'
+export ANDROID_HOME='/Users/tudor/Library/Android/sdk'
 
 #
 # Language
@@ -46,8 +46,9 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
     /usr/local/{bin,sbin}
+    ~/Library/Haskell/bin
     ~/bin
-    /Applications/Android\ Studio.app/sdk/{platform-tools,tools}
+    /Users/tudor/Library/Android/sdk/{platform-tools,tools}
     $path
 )
 
@@ -79,3 +80,13 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 
+autoload -U +X bashcompinit && bashcompinit
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/tudor/Library/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables bash completion for gcloud.
+source '/Users/tudor/Library/google-cloud-sdk/completion.zsh.inc'
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/tudor/.gvm/bin/gvm-init.sh" ]] && source "/Users/tudor/.gvm/bin/gvm-init.sh"
